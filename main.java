@@ -3,7 +3,7 @@ public class main {
         printFizzBuzz(1, 15);
     }
 
-
+// Закомменчена базовая Вариация ДЗ
 
 //    public static void printFizzBuzz(int start, int end) {
 //        for (int i = start; i <= end; i++) {
@@ -20,6 +20,8 @@ public class main {
 //    }
 //}
 
+// Активен вариант с ДЗ, где метод игнорирует обычные числа, подходящие прописывает сразу со значением
+
     public static void printFizzBuzz(int start, int end) {
         for (int i = start; i <= end; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -28,8 +30,6 @@ public class main {
                 System.out.println("Fizz " + i);
             } else if (i % 5 == 0) {
                 System.out.println("Buzz " + i);
-            } else {
-                continue;
             }
         }
     }
