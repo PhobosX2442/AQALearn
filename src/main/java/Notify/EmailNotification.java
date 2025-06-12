@@ -13,9 +13,9 @@ public class EmailNotification extends Notification{
     }
     @Override
     public void send() {
-        System.out.println("id: " + getId());
-        System.out.println("Отправляем Email на " + getEmail());
+        System.out.print("id: " + getId() + ", ");
         System.out.println("Приоритет: " + getPriority());
+        System.out.println("Отправляем Email на " + getEmail());
         System.out.println("Сообщение: " + getMessage());
         System.out.println();
 

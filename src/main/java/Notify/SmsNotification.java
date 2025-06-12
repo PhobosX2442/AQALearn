@@ -17,9 +17,9 @@ public class SmsNotification extends Notification{
 
     @Override
     public void send() {
-        System.out.println("id: " + getId());
-        System.out.println("Отправляем SMS на " + getPhoneNumber());
+        System.out.print("id: " + getId() + ", ");
         System.out.println("Приоритет: " + getPriority());
+        System.out.println("Отправляем SMS на " + getPhoneNumber());
         System.out.println("Сообщение: " + getMessage());
         System.out.println();
 

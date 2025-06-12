@@ -30,7 +30,7 @@ public class Notification {
 
 
     public void send() {
-        System.out.println("id: " + getId());
+        System.out.print("id: " + getId() + ", ");
         System.out.println("Приоритет: " + getPriority());
         System.out.println("Сообщение: " + getMessage());
         System.out.println();
