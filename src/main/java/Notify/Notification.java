@@ -9,14 +9,8 @@ public class Notification {
     public String getMessage() {
         return message;
     }
-    public void setMessage(String message) {
-        this.message = message;
-    }
     public Priority getPriority() {
         return priority;
-    }
-    public void setPriority(Priority priority) {
-        this.priority = priority;
     }
     public int getId() {
         return id;
@@ -46,5 +40,10 @@ public class Notification {
     public void send(String extra) {
         System.out.println("Notification: " + message);
         System.out.println("extra");
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + getId() + ", Приоритет: " + getPriority() + ", Сообщение:" + getMessage();
     }
 }
