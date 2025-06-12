@@ -1,36 +1,50 @@
 package Notify;
 
 public class Notification {
-     final int = id;
-     String message;
-     Priority priority;
-     static String nextId;
+    private final int id;
+    private String message;
+    private Priority priority;
+    private static int nextId = 1;
 
-     public Notification() {
-         this.id = id;
-         this.message = "empty";
-         this.priority = Notify.priority.NORMAL;
-     }
-
-     public Notification(String id, String message, Priority Priority) {
-         this.id = id;
-         this.message = message;
-         this.priority = Priority;
-     }
-
-    public void send(String message) {
-         System.out.println(message);
-         this.id = this.nextid++;
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public Priority getPriority() {
+        return priority;
+    }
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+    public int getId() {
+        return id;
     }
 
-    public void sendExtra(String extra) {
-        System.out.println(message);
+    public Notification(Priority priority, String message) {
+        this.message = message;
+        this.priority = priority;
+        this.id = nextId++;
+    }
+
+    public Notification() {
+        this.message = "empty";
+        this.priority = Priority.NORMAL;
+        this.id = nextId++;
+    }
+
+
+    public void send() {
+        System.out.println("id: " + getId());
+        System.out.println("Приоритет: " + getPriority());
+        System.out.println("Сообщение: " + getMessage());
+        System.out.println();
+
+    }
+
+    public void send(String extra) {
+        System.out.println("Notification: " + message);
         System.out.println("extra");
-        this.id = this.nextid++;
-    }
-
-    @Override
-    public String toString() {
-         return System.out.println(Notification.message);
     }
 }

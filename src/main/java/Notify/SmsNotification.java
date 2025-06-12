@@ -1,15 +1,27 @@
 package Notify;
 
 public class SmsNotification extends Notification{
-    String PhoneNumber;
+    private String phoneNumber;
 
-    public SmsNotification (String PhoneNumber, String message) {
-        this.priority = Notify.priority.LOW;
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public SmsNotification(String message, String phoneNumber) {
+        super(Priority.LOW, message);
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
-    public String send() {
-        System.out.println("Sending SMS to …");
-        super.send();
+    public void send() {
+        System.out.println("id: " + getId());
+        System.out.println("Отправляем SMS на " + getPhoneNumber());
+        System.out.println("Приоритет: " + getPriority());
+        System.out.println("Сообщение: " + getMessage());
+        System.out.println();
+
     }
 }
