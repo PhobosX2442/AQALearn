@@ -2,7 +2,7 @@ package Notify;
 
 public class Demo {
 
-    static String message = "Тестовое сообщение | Test message";
+    static String message = "Тестовое сообщение";
     static Priority priority = Priority.NORMAL;
     static String email = "qqq@qq.qq";
     static String phoneNumber = "123123123";
